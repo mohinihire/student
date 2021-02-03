@@ -1,0 +1,18 @@
+<div class="Page New">
+<h2>  Add new book </h2>
+<%=form_for(:book_record,url:{controller:"display",action:'create'}) do |t| %>
+
+<p><label for="book_title">Book Title </label>:
+<%=text_field 'book','title' %></p>
+
+<p><label for="book_price">Book Price</label>:
+<%=text_field 'book','price' %></p>
+
+<p><label for="book_author">Book Author </label>:
+<%=text_field 'book','author' %></p>
+
+<div class="form-botton">
+  <%=submit_tag("create book") %>
+</div>
+<% end -%>
+<%= link_to 'Back to book list',controller:"display",action: 'list_book', class:"back-link"%>

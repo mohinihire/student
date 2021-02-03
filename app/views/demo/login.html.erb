@@ -1,0 +1,21 @@
+
+<div class ="Register page">
+   <h2> Login</h2>
+   <%=form_for(:users,url: {controller:"user", action:'create'})do |t|%>
+    <table summary="Book form fields">
+    	
+    	<tr>
+    		<th> Email </th>
+    		<td> <%=t.text_field(:email)%> </td>
+    	</tr>
+    	<tr>
+    		<th> Password </th>
+    		<td> <%=t.text_field(:password)%> </td>
+    	</tr>
+    </table>
+    <div class="form-button">
+    	<%=submit_tag("Login")%>
+    </div>
+    <%end %>
+</div>
+
